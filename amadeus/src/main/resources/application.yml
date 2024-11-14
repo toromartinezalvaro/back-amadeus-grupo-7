@@ -1,0 +1,18 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: Amadeus
+  datasource:
+    url: jdbc:postgresql://localhost:5432/amadeus
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #update, validate, create-drop
+    show-sql: true
+
+
