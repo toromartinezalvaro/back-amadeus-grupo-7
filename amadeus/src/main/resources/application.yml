@@ -12,7 +12,7 @@ spring:
     password: postgres
   jpa:
     hibernate:
-      ddl-auto: create-drop #update, validate, create-drop
+      ddl-auto: update #update, validate, create-drop
     show-sql: true
 
 
