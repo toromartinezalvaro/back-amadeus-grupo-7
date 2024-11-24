@@ -1,9 +1,7 @@
 package co.edu.eafit.amadeus.models.enums;
 
 public enum ActividadEnum {
-  DEPORTE,
-  AVENTURA,
-  CULTURA,
-  MUSEOS,
-  RELAX_Y_BIENESTAR,
+    DEPORTES_Y_AVENTURAS,
+    CULTURA_Y_MUSEOS,
+    RELAX_Y_BIENESTAR,
 }

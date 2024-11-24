@@ -15,4 +15,4 @@ spring:
       ddl-auto: update #update, validate, create-drop
     show-sql: true
 
-
+#http://localhost:8084/api/v1/swagger-ui/index.html
