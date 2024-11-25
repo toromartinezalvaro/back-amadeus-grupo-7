@@ -126,6 +126,13 @@ VALUES ('Ciudad de México, México', 2, CURRENT_TIMESTAMP);
 INSERT INTO destinos (nombre, continentes_id, created_at)
 VALUES ('Madrid, España', 3, CURRENT_TIMESTAMP);
 
+--DESTINOS POR DEFAULT
+INSERT INTO destinos (nombre, continentes_id, created_at)
+VALUES ('Bora Bora, Polinesia Francesa', 1, CURRENT_TIMESTAMP);
+
+INSERT INTO destinos (nombre, continentes_id, created_at)
+VALUES ('Dubái, Emiratos Árabes', 1, CURRENT_TIMESTAMP);
+
 
 -- PREFERENCIAS
 INSERT INTO preferencias(entorno, clima, actividad, alojamiento, tiempo_viaje, rango_edad)
