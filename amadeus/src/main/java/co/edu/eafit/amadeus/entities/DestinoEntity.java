@@ -28,6 +28,21 @@ public class DestinoEntity implements Serializable {
     @Column(nullable = false, unique = true)
     String nombre;
 
+    @Column
+    String pais;
+
+    @Column
+    String idioma;
+
+    @Column(name = "lugar_imperdible")
+    String lugarImperdible;
+
+    @Column(name = "comida_tipica")
+    String comidaTipica;
+
+    @Column(name = "img_url")
+    String imgUrl;
+
     @ManyToOne // Muchos destinos estan en un solo continente
     @JoinColumn(name = "continentes_id") // Asigna el nombre de la FK en la tabla de 
     ContinenteEntity continente;

@@ -20,6 +20,19 @@ public class DestinoResponse {
 
     String nombre;
 
+    String pais;
+
+    String idioma;
+
+    @JsonProperty("lugar_imperdible")
+    String lugarImperdible;
+
+    @JsonProperty("comida_tipica")
+    String comidaTipica;
+
+    @JsonProperty("img_url")
+    String imgUrl;
+
     @JsonProperty("nombre_continente")
     String nombreContinente;
 
