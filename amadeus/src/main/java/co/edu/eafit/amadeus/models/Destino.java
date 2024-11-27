@@ -14,5 +14,15 @@ public class Destino {
 
   String nombre;
 
+  String pais;
+
+  String idioma;
+
+  String lugarImperdible;
+
+  String comidaTipica;
+
+  String imgUrl;
+
   Continente continente;
 }
