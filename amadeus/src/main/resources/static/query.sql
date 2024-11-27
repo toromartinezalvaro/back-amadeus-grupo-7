@@ -13,125 +13,126 @@ values ('Europa', 'Continente Europeo');
 
 -- DESTINOS
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Playa del Carmen, Mexico', 2, CURRENT_TIMESTAMP, 'México', 'español' 'Chichén-Itzá', 'Salbutes', 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSsEgGDtay7yynbtJCdRRvuLW0dWTzG3_BDf36Vo0flnkq7E_BJpr3-EclLGqYfPhIn-REwJqGs0lcfgpU6M34pYibADP7HTCHvX9jwZA');
+VALUES ('Playa del Carmen, Mexico', 2, CURRENT_TIMESTAMP, 'México', 'español', 'Chichén-Itzá', 'Salbutes',
+        'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSsEgGDtay7yynbtJCdRRvuLW0dWTzG3_BDf36Vo0flnkq7E_BJpr3-EclLGqYfPhIn-REwJqGs0lcfgpU6M34pYibADP7HTCHvX9jwZA');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Santorini, Grecia', 3, CURRENT_TIMESTAMP, 'Grecia', 'Griego', 'Oia', 'Moussaka', 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Santorini_%28GR%29%2C_Oia%2C_view_from_the_castle_%28by_Pudelek%29.jpg');
+VALUES ('Santorini, Grecia', 3, CURRENT_TIMESTAMP, 'Grecia', 'Griego', 'Oia', 'Moussaka', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSKEchVmyIPbv1XBHQVjbCGSu7ELlk46OgcW6MoKl6upCUiKu7wUP0K0E-mRbjo_m24dJMpjn5hbxr_SWgU5-Irm43Ay4cHtFjA_AOd-w');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Cartagena, Colombia', 2, CURRENT_TIMESTAMP, 'Colombia', 'Español', 'Ciudad Amurallada', 'Bandeja Paisa', 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Cartagena_Colombia.jpg');
+VALUES ('Cartagena, Colombia', 2, CURRENT_TIMESTAMP, 'Colombia', 'Español', 'Ciudad Amurallada', 'Cazuela de Mariscos', 'https://lh5.googleusercontent.com/p/AF1QipMVfyWlbwj-OyndRaLB8OcBQ3qFQffDq343NUNj=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Barcelona, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Sagrada Familia', 'Paella', 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Barcelona_-_Spain_-_La_Sagrada_Familia.jpg');
+VALUES ('Barcelona, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Sagrada Familia', 'Paella', 'https://lh5.googleusercontent.com/p/AF1QipOxwFRsHTWMWABPquEmNX4bIqjJk8Gu5YYoeFvs=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Rio de Janeiro, Brasil', 2, CURRENT_TIMESTAMP, 'Brasil', 'Portugués', 'Cristo Redentor', 'Feijoada', 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Rio_de_Janeiro_-_Brasil_-_2015_-_Christusstatue.jpg');
+VALUES ('Rio de Janeiro, Brasil', 2, CURRENT_TIMESTAMP, 'Brasil', 'Portugués', 'Cristo Redentor', 'Feijoada', 'https://lh5.googleusercontent.com/p/AF1QipPUTncdgQzogJ1bTDMPJJX3nqQjs0FZ4iDpf-he=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Lisboa, Portugal', 3, CURRENT_TIMESTAMP, 'Portugal', 'Portugués', 'Torre de Belém', 'Bacalhau à Brás', 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Lisboa_-_Portugal_%282%29.jpg');
+VALUES ('Lisboa, Portugal', 3, CURRENT_TIMESTAMP, 'Portugal', 'Portugués', 'Torre de Belém', 'Bacalhau à Brás', 'https://lh5.googleusercontent.com/p/AF1QipNPJSyPRk-i6wRJQ3IJwjCxE2qdbGXCFpkXQ_LR=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Bariloche, Argentina', 2, CURRENT_TIMESTAMP, 'Argentina', 'Español', 'Cerro Catedral', 'Asado', 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bariloche_-_Argentina.jpg');
+VALUES ('Bariloche, Argentina', 2, CURRENT_TIMESTAMP, 'Argentina', 'Español', 'Cerro Catedral', 'Asado', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ-SfIII1xLSAS3oV3zrIJG83_dEcpy0Lg5VfycEokHpeYo0xeI7rGambr0tYacAtaUKn6pR5NrEZ4RQmPmyUhkyG13FPrmAfaCDY6wKQ');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Interlaken, Suiza', 3, CURRENT_TIMESTAMP, 'Suiza', 'Alemán', 'Jungfraujoch', 'Fondue', 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Interlaken_-_Switzerland.jpg');
+VALUES ('Interlaken, Suiza', 3, CURRENT_TIMESTAMP, 'Suiza', 'Alemán', 'Jungfraujoch', 'Fondue', 'https://lh5.googleusercontent.com/p/AF1QipMC6smIuDIlHhsE4OWqUZxEn3t8uqgI_aSlFmaA=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Cusco, Perú', 2, CURRENT_TIMESTAMP, 'Perú', 'Español', 'Machu Picchu', 'Ceviche', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Cusco_Peru.jpg');
+VALUES ('Cusco, Perú', 2, CURRENT_TIMESTAMP, 'Perú', 'Español', 'Machu Picchu', 'Ceviche', 'https://lh5.googleusercontent.com/p/AF1QipORjUq02fgtogOziVA5Qe5JxJGHlRatzuhMUhf8=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Granada, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Alhambra', 'Tortilla Española', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Granada_-_Spain_%282%29.jpg');
+VALUES ('Granada, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Alhambra', 'Tortilla Española', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRxOTQBjLt3480QFzkSlhnnZ0mQVZh4VVnDbBXXlvwv-ya_zuxGyBaKYYBzqp8r2MwBsVRnZl9a3ZJE9GST0V-vExD6FEYqBfT_7LLzBg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Banff, Canadá', 2, CURRENT_TIMESTAMP, 'Canadá', 'Inglés', 'Lago Moraine', 'Poutine', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Banff_National_Park.jpg');
+VALUES ('Banff, Canadá', 2, CURRENT_TIMESTAMP, 'Canadá', 'Inglés', 'Lago Moraine', 'Poutine', 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS5i1pBNjrxyDIxWtAVJW_lkrL1AV0NUkXfsAQxDMgrCyCrArqVxTBc7vms74IlKRt2pjDSqpkLtK3dp7IBabCWuJSncQ_NMJq18K0oug');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Zermatt, Suiza', 3, CURRENT_TIMESTAMP, 'Suiza', 'Alemán', 'Matterhorn', 'Rösti', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Zermatt_-_Switzerland_%282%29.jpg');
+VALUES ('Zermatt, Suiza', 3, CURRENT_TIMESTAMP, 'Suiza', 'Alemán', 'Matterhorn', 'Rösti', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSAQcCDSb6m6eo3VJ1mZ8zlT4J3poq2-v3PM0Ph6atAFrnMKHXTClkZLKrkx0vRMPPfGJlApHInz4J3vpZePZ9csZB8K38Sgr-09Hrneg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Nueva York, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Central Park', 'Hamburguesa', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/New_York_City_%282%29.jpg');
+VALUES ('Nueva York, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Central Park', 'Hamburguesa', 'https://lh3.googleusercontent.com/proxy/g-ljxmC9hqYpgbNRM2dhT4x30UsLIeylGkNR8j7xU75F3uXUHTB-hNcdjNy_H5_ZxgnbUxNUvne8TOZBcYT-BwoIQZgXwXlkyciXBHBPkNH2SavG7WhWDqT383O5PPPhie3Pw0fSRriv3TF8TEb8cu7JuH5-_Q=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('París, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Torre Eiffel', 'Croissant', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Paris_-_France_%282%29.jpg');
+VALUES ('París, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Torre Eiffel', 'Croissant', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQB19lTbuMXK3ICGgIQium_8s9s3aWQyeCqY6_k4EHJE8Bqfwsj_bHFtzpOInjAbBrVo98xmieHU1-pRhEDJ941EUyPRa7BpiF1V5o9KA');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Miami, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Ocean Drive', 'Cubano', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Miami_-_USA_%282%29.jpg');
+VALUES ('Miami, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Ocean Drive', 'Cubano', 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcShxWawBkoL_1-TwGmiYpGoK7TWnMNIqOXjyPTWeMewhsGd1MZAqBByntjcu_1o99Qeh55FPRs_U8qNuJr9qg_9mLT48KPzMjYGrUJxpg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Viena, Austria', 3, CURRENT_TIMESTAMP, 'Austria', 'Alemán', 'Palacio de Schönbrunn', 'Wiener Schnitzel', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Vienna_-_Austria_%282%29.jpg');
+VALUES ('Viena, Austria', 3, CURRENT_TIMESTAMP, 'Austria', 'Alemán', 'Palacio de Schönbrunn', 'Wiener Schnitzel', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQhmmjDULK_wpRBu1pTjscz0_jzZNayOww794qmfUoBOenvO_tJ03meRDfBWULqH1rf5pIN-bw7pOT90T88wMzE621kDAhJTyGWhC7X7g');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Toronto, Canadá', 2, CURRENT_TIMESTAMP, 'Canadá', 'Inglés', 'CN Tower', 'Poutine', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Toronto_-_Canada_%282%29.jpg');
+VALUES ('Toronto, Canadá', 2, CURRENT_TIMESTAMP, 'Canadá', 'Inglés', 'CN Tower', 'Poutine', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSW9ckAy6THoZo16osm6gFx8FTw_eEwUwBQsPyJP8i9-tS0XcRF9Gjiur9Jr1MKjHIowILKm3Dg3Z0qt-ashs7uvQJTkJ4skbX2rIxXHA');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Berlín, Alemania', 3, CURRENT_TIMESTAMP, 'Alemania', 'Alemán', 'Puerta de Brandeburgo', 'Currywurst', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Berlin_-_Germany_%282%29.jpg');
+VALUES ('Berlín, Alemania', 3, CURRENT_TIMESTAMP, 'Alemania', 'Alemán', 'Puerta de Brandeburgo', 'Currywurst', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTIfYrJDD7_H9dZcmHZeKr9TmEAQ4KbxOO4b67XIfn0mpkzPwqmJvBSWxDX_PcOwi3BByZY-wrbGfQJp3lcwdgwiwv6JXaYqO7IEE90kQ');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Tulum, México', 2, CURRENT_TIMESTAMP, 'México', 'Español', 'Ruinas de Tulum', 'Tacos', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Tulum_-_Mexico_%282%29.jpg');
+VALUES ('Tulum, México', 2, CURRENT_TIMESTAMP, 'México', 'Español', 'Ruinas de Tulum', 'Tacos', 'https://lavidasondosviajes.com/wp-content/uploads/2022/06/ruinas-que-ver-en-tulum.jpg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Ibiza, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Playa de Ses Illetes', 'Paella', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Ibiza_-_Spain_%282%29.jpg');
+VALUES ('Ibiza, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Playa de Ses Illetes', 'Paella', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ25B41WBP9PXz5J-Kg2LM_4H1x_EfdtLlZ30eH9NTkBRl-e1tmt2uCb95nRfoOGRx46b4dAaquteRwnEsuxznkzp__o638eoKafYjCKQ');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Ushuaia, Argentina', 2, CURRENT_TIMESTAMP, 'Argentina', 'Español', 'Canal Beagle', 'Asado', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Ushuaia_-_Argentina_%282%29.jpg');
+VALUES ('Ushuaia, Argentina', 2, CURRENT_TIMESTAMP, 'Argentina', 'Español', 'Canal Beagle', 'Asado', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcS3ZsFFeuBcky5BXnAv9mzhfZpckqXbQeUibmvY7SmFLqMN6lkkPbcm2TIsyVM0EDsLTsuFiXXrIX2_hELULGdxGBuZMlawKTEFCcT1JA');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Reykjavik, Islandia', 3, CURRENT_TIMESTAMP, 'Islandia', 'Islandés', 'Blue Lagoon', 'Skyr', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Reykjavik_-_Iceland_%282%29.jpg');
+VALUES ('Reykjavik, Islandia', 3, CURRENT_TIMESTAMP, 'Islandia', 'Islandés', 'Blue Lagoon', 'Skyr', 'https://lh5.googleusercontent.com/p/AF1QipOd0uslkh05Ey3auyorQ9kYVGA3dRhyIthKVcKy=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Punta Cana, República Dominicana', 2, CURRENT_TIMESTAMP, 'República Dominicana', 'Español', 'Playa Bávaro', 'Mangú', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Punta_Cana_-_Dominican_Republic_%282%29.jpg');
+VALUES ('Punta Cana, República Dominicana', 2, CURRENT_TIMESTAMP, 'República Dominicana', 'Español', 'Playa Bávaro', 'Mangú', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSoeSjS2oex8LXHfqhd7M980AKuGvblppPnTJyhGHIcQDEWN_Dy7c78v9_aiSralykZiaQJllvJssKa6SVO96jM5RiFSjdQzgzmkdoh6g');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Algarve, Portugal', 3, CURRENT_TIMESTAMP, 'Portugal', 'Portugués', 'Praia da Marinha', 'Cataplana', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Algarve_-_Portugal_%282%29.jpg');
+VALUES ('Algarve, Portugal', 3, CURRENT_TIMESTAMP, 'Portugal', 'Portugués', 'Praia da Marinha', 'Cataplana', 'https://lh5.googleusercontent.com/p/AF1QipMeTMP4wkVkLLhbKbwUSL0116sXNlp9QywbNLcd=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Chicago, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Millennium Park', 'Hot Dog', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Chicago_-_USA_%282%29.jpg');
+VALUES ('Chicago, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Millennium Park', 'Hot Dog', 'https://lh5.googleusercontent.com/p/AF1QipNMCexgTHrhXahYlqYPCnn8tABv5ZS3NOXVi3b4=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Londres, Reino Unido', 3, CURRENT_TIMESTAMP, 'Reino Unido', 'Inglés', 'Big Ben', 'Fish and Chips', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/London_-_United_Kingdom_%282%29.jpg');
+VALUES ('Londres, Reino Unido', 3, CURRENT_TIMESTAMP, 'Reino Unido', 'Inglés', 'Big Ben', 'Fish and Chips', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRfy0GJeSvOlk4DCD5F_KBpRmVv1zMAjd4Q3jxsRwasl5N3KplKt3RoJWUMrNV6Wd6E7oqYfPGRFZPvc66qqjUqlg8LD73_dEIJRNzTqg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('San Juan, Puerto Rico', 2, CURRENT_TIMESTAMP, 'Puerto Rico', 'Español', 'Viejo San Juan', 'Mofongo', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/San_Juan_-_Puerto_Rico_%282%29.jpg');
+VALUES ('San Juan, Puerto Rico', 2, CURRENT_TIMESTAMP, 'Puerto Rico', 'Español', 'Viejo San Juan', 'Mofongo', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTM3yildmlADM2AbK61asNKPTgqZiYCG4zPnyuBTOF5UqtQ5S_Gl1ZN-GPW49u9w15jjGNMLCBigbpzztwY-W5PxSlkQFhLHN8d4Cqgsg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Niza, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Paseo de los Ingleses', 'Ratatouille', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Nice_-_France_%282%29.jpg');
+VALUES ('Niza, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Paseo de los Ingleses', 'Ratatouille', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcT4PkkEFmk1DoQUKoAPN5uK2ZxwCM0HZ-HEDuoTq3sdFK0oAuTUyLm7mmwRo1ysqgr97CTceNK9QUUYLn80PrrjCXRyf81JV5HYudCOzw');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Machu Picchu, Perú', 2, CURRENT_TIMESTAMP, 'Perú', 'Español', 'Machu Picchu', 'Ceviche', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Machu_Picchu_-_Peru_%282%29.jpg');
+VALUES ('Machu Picchu, Perú', 2, CURRENT_TIMESTAMP, 'Perú', 'Español', 'Machu Picchu', 'Ceviche', 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQT8tfTOX2rjqW3LMhTELr_7BRIJq8sckiw7BA0UL4Zb7P_lcESksxQU0Kt0mebaK6qzjy0HQ_G_dQaFVzoR9wuM7t0pIu6REhO1_dHBw');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Chamonix, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Mont Blanc', 'Fondue', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Chamonix_-_France_%282%29.jpg');
+VALUES ('Chamonix, Francia', 3, CURRENT_TIMESTAMP, 'Francia', 'Francés', 'Mont Blanc', 'Fondue', 'https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTZ1HbSdRjQyBqQ_uWmhwwUA-3JpvnkHCVrQ2RvYZOAo5BvtEriEaSg_oiiL9buc5p4QoN1YwM6MAC4BIXSqjitaFrW9E3AukjNP_CDGw');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Los Ángeles, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Hollywood', 'Hamburguesa', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Los_Angeles_-_USA_%282%29.jpg');
+VALUES ('Los Ángeles, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Hollywood', 'Hamburguesa', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRNmhjFYQEGxB9QMDa2x-_JuVWEiy1SoC4JWitgfe6jQxXUB1KKgxYuZnjK1pKEC351O7bAJvI8oryJ5dotu-dCCOAFfbeOS0bmZu7cNw');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Roma, Italia', 3, CURRENT_TIMESTAMP, 'Italia', 'Italiano', 'Coliseo', 'Pizza', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Rome_-_Italy_%282%29.jpg');
+VALUES ('Roma, Italia', 3, CURRENT_TIMESTAMP, 'Italia', 'Italiano', 'Coliseo', 'Pizza', 'https://lh5.googleusercontent.com/proxy/Yzdb0Ml3JUhHIDZNG7ZbDXHechmZEMx1qZlClkzqfXy4bg7GiSSxU_OqP9omjbjK5VrP7KlHjExf62KsCzGl33Ju_7yQq7eBXWdCIMGVlTyGx1D7LR6lL0wBaif8RbiCYmQvMg4xpLY31PfgaqVhvGj24I_Qpw=w540-h312-n-k-no');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Honolulu, Hawái', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Waikiki', 'Poke', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Honolulu_-_USA_%282%29.jpg');
+VALUES ('Honolulu, Hawái', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Waikiki', 'Poke', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcS770_NITGECjC-qrIDg3B3T6xG4PquUJSSIHTZahPn6P_q_M5Fl-X8Bf2CACF6eZcFqbvjXm7JatvY4imUau1yTUQrHXzY4cV48nN_aQ');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Malta', 3, CURRENT_TIMESTAMP, 'Malta', 'Maltés', 'La Valeta', 'Pastizzi', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Malta_%282%29.jpg');
+VALUES ('Malta', 3, CURRENT_TIMESTAMP, 'Malta', 'Maltés', 'La Valeta', 'Pastizzi', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRDWSP6xOunmLK_KL3RrCM6nfHSjdg0V4VgBxNLTcNKwubNZIV4m6Zn44a_0t9JzmEEvSx175nAbtJjsbyf5uhWdw8E1EGRspDW67EOMg');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Aspen, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Maroon Bells', 'Hamburguesa', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Aspen_-_USA_%282%29.jpg');
+VALUES ('Aspen, EE.UU', 2, CURRENT_TIMESTAMP, 'EE.UU', 'Inglés', 'Maroon Bells', 'Hamburguesa', 'https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR0Lj48jrr1E690626PW3U3qSi6n2dgTlSk0BNXb3MheFId7XcPX44CdE9a07j7E_u9lKvi--yQMTfEk33WipVyWV4ojD3hW0uGoqaA_w');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Innsbruck, Austria', 3, CURRENT_TIMESTAMP, 'Austria', 'Alemán', 'Tejado de Oro', 'Wiener Schnitzel', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Innsbruck_-_Austria_%282%29.jpg');
+VALUES ('Innsbruck, Austria', 3, CURRENT_TIMESTAMP, 'Austria', 'Alemán', 'Tejado de Oro', 'Wiener Schnitzel', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSzy7HLAM-zxvpiEvSV6T4ITO8h9KRj9P7Exhg28AcSYgkHpIK_1zKzg6PhoTneIUBdEtWivfw3PYGNcX8Kh3euTuWcICxaYOUlXkiMBA');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Ciudad de México, México', 2, CURRENT_TIMESTAMP, 'México', 'Español', 'Zócalo', 'Tacos', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Ciudad_de_Mexico_-_Mexico_%282%29.jpg');
+VALUES ('Ciudad de México, México', 2, CURRENT_TIMESTAMP, 'México', 'Español', 'Zócalo', 'Tacos', 'https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRkqHlAgGAAIXOIO02KVBc0Q9tGSUACQlUmvIrcqN9Ukg8RFxXubFKx0IAmyBsHdQ24rlbC4zIvIVh0o6f1-AKDjlnLmvp6rficC1BZRw');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Madrid, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Parque del Retiro', 'Cocido Madrileño', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Madrid_-_Spain_%282%29.jpg');
+VALUES ('Madrid, España', 3, CURRENT_TIMESTAMP, 'España', 'Español', 'Parque del Retiro', 'Cocido Madrileño', 'https://lh5.googleusercontent.com/p/AF1QipPp7gG6UeQm7kyfY5d_KCZbDZnKjsFGMTpUH8YQ=w540-h312-n-k-no');
 
 --DESTINOS POR DEFAULT
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Bora Bora, Polinesia Francesa', 1, CURRENT_TIMESTAMP, 'Polinesia Francesa', 'Francés', 'Monte Otemanu', 'Poisson Cru', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Bora_Bora_-_French_Polynesia_%282%29.jpg');
+VALUES ('Bora Bora, Polinesia Francesa', 1, CURRENT_TIMESTAMP, 'Polinesia Francesa', 'Francés', 'Monte Otemanu', 'Poisson Cru', 'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcR8FpQa5S2XLD5B_v-lLquzTFpzP5KADiZTjL1DAuLgX__enFb89uGALIovy4q8HXPohX6aiAPJz_pTcqwno31RIV58XsBQJyzm17p-1w');
 
 INSERT INTO destinos (nombre, continentes_id, created_at, pais, idioma, lugar_imperdible, comida_tipica, img_url)
-VALUES ('Dubái, Emiratos Árabes', 1, CURRENT_TIMESTAMP, 'Emiratos Árabes', 'Árabe', 'Burj Khalifa', 'Shawarma', 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Dubai_-_United_Arab_Emirates_%282%29.jpg');
+VALUES ('Dubái, Emiratos Árabes', 1, CURRENT_TIMESTAMP, 'Emiratos Árabes', 'Árabe', 'Burj Khalifa', 'Shawarma', 'https://lh5.googleusercontent.com/p/AF1QipM3Su1i0T610BB_q7wHixPLDVhMPdMoMHU21eHV=w540-h312-n-k-no');
 
 
 -- PREFERENCIAS
