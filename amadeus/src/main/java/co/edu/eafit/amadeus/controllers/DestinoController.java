@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.eafit.amadeus.contracts.requests.DestinoRequest;
 import co.edu.eafit.amadeus.contracts.responses.DestinoResponse;
+import co.edu.eafit.amadeus.mappers.DestinoMapper;
 import co.edu.eafit.amadeus.models.Continente;
 import co.edu.eafit.amadeus.models.Destino;
 import co.edu.eafit.amadeus.services.DestinoService;
@@ -28,6 +29,9 @@ public class DestinoController {
     // Se debe llamar el servicio que se va a usar 
     @Autowired
     private DestinoService destinoService;
+
+    @Autowired
+    private DestinoMapper destinoMapper;
 
     // Se usa el "ResponseEntity" para poder devolver un estatus, como seria por ejemplo un 201 de guardado
     @Operation(summary = "Crea un destino", description = "Crea un destino")
@@ -58,24 +62,16 @@ public class DestinoController {
                 .body(destinoResponse);
     }
 
-    @Operation(summary = "Consulta todos los destinos", description = "Consulta todos los destinos")
-    @GetMapping
-    public ResponseEntity<List<DestinoResponse>> index() {
+        @Operation(summary = "Consulta todos los destinos", description = "Consulta todos los destinos")
+        @GetMapping
+        public ResponseEntity<List<DestinoResponse>> index() {
         List<Destino> destinos = destinoService.findAll();
 
-        // TODO: USAR MAPPER
-        final List<DestinoResponse> responses // lista de DestinoResponse
-                = destinos.stream()
-                        .map(destino -> {
-                            DestinoResponse destinoResponse
-                                    = DestinoResponse.builder()
-                                            .id(destino.getId())
-                                            .nombre(destino.getNombre())
-                                            .nombreContinente(destino.getContinente().getNombre())
-                                            .build();
-                            return destinoResponse;
-                        }).collect(Collectors.toList()); // Convierte a una lista
+        // Usar el mapper para convertir la lista de Destino a DestinoResponse
+        final List<DestinoResponse> responses = destinos.stream()
+                .map(destinoMapper::toDestinoResponse)
+                .collect(Collectors.toList());
 
         return ResponseEntity.ok(responses);
-    }
+        }
 }
