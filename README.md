@@ -1,6 +1,5 @@
 # back-amadeus-grupo7
 
-# back-amadeus-grupo7
 
 ## Índice
 1. [Descripción](#descripción)
@@ -34,3 +33,5 @@ Este enfoque optimiza tiempos de respuesta y ofrece un sistema eficiente para an
 
 ## Diseño ERD 
 ![Imagen Relación Base de Datos](./documentationImg/ERD_DB.jpeg) 
+Ilustración 1. ERD de la DB
+
