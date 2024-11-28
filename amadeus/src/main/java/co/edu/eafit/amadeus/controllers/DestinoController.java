@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.eafit.amadeus.contracts.requests.DestinoRequest;
@@ -27,18 +28,18 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class DestinoController {
 
     // Se debe llamar el servicio que se va a usar 
-    @Autowired
-    private DestinoService destinoService;
+        @Autowired
+        private DestinoService destinoService;
 
-    @Autowired
-    private DestinoMapper destinoMapper;
+        @Autowired
+        private DestinoMapper destinoMapper;
 
     // Se usa el "ResponseEntity" para poder devolver un estatus, como seria por ejemplo un 201 de guardado
-    @Operation(summary = "Crea un destino", description = "Crea un destino")
-    @PostMapping
-    public ResponseEntity<DestinoResponse> save(
-            @RequestBody DestinoRequest destinoRequest
-    ) {
+        @Operation(summary = "Crea un destino", description = "Crea un destino")
+        @PostMapping
+        public ResponseEntity<DestinoResponse> save(
+                @RequestBody DestinoRequest destinoRequest
+        ) {
 
         // TODO: USAR MAPPER AQUI
         Destino destino = new Destino();
@@ -60,7 +61,7 @@ public class DestinoController {
         return ResponseEntity
                 .status(HttpStatus.CREATED) // Envia el estatus de que se guardo bien
                 .body(destinoResponse);
-    }
+        }
 
         @Operation(summary = "Consulta todos los destinos", description = "Consulta todos los destinos")
         @GetMapping
@@ -73,5 +74,23 @@ public class DestinoController {
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(responses);
+        }
+
+        @Operation(summary = "Consulta destinos por IDs", description = "Consulta destinos por IDs")
+        @GetMapping("/ids")
+        public ResponseEntity<List<DestinoResponse>> findByIds(@RequestParam List<Long> ids) {
+        List<DestinoResponse> destinoResponses = ids.stream()
+                .map(id -> {
+                        Destino destino = destinoService.findById(id);
+                        if (destino != null) {
+                        return destinoMapper.toDestinoResponse(destino);
+                        } else {
+                        return null;
+                        }
+                })
+                .filter(destinoResponse -> destinoResponse != null)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(destinoResponses);
         }
 }
