@@ -10,7 +10,7 @@
 6. [Ejecución de Aplicación](#ejecución-de-aplicación)
 7. [Ubicación enlace Swagger Documentación](#Ubicación-enlace-swagger-documentación)
 8. [Tratamiento Error DB](#tratamiento-error-db)
-9. [Endpoints/enlace/Documentación](#endpointsenlacedocumentación)
+9. [Endpoints, Enlace y Documentación](#Endpoints-Enlace-y-Documentación)
 10. [Reportes](#Reportes)
 11. [Autores](#autores)
 
@@ -207,3 +207,85 @@ El comando `create-drop` vacía el contenido de todas las tablas de la base de d
 Una vez verificada la eliminación de los datos, se debe regresar el cambio a `update` para que los nuevos datos sean guardados correctamente. 
 
 **Nota**: Si no se regresa el cambio a `update`, la aplicación estará constantemente eliminando todo el ingreso de datos.
+
+
+## Endpoints, Enlace y Documentación
+
+Accede al siguiente enlace para utilizar Swagger, el cual contiene tres diferentes **Endpoints**:
+
+[Swagger UI](http://localhost:8084/api/v1/swagger-ui/index.html)
+
+Los tres Endpoints disponibles son:
+
+1. **Endpoints Usuario Controller**
+2. **Preferencia-Controller**
+3. **Endpoints Destino Controller**
+
+
+
+![Imagen ](./documentationImg/18swagger.png)
+### Ilustración 18: Endpoints en el enlace de Swagger
+
+#### 1. Usuario Controller
+En el **Usuario Controller**, se encuentran varios Endpoints, algunos de los cuales actualmente no se usarán en la aplicación del Frontend, como el `POST /usuarios`.
+
+
+- **GET /usuarios**: Sirve para buscar usuarios.
+  
+
+  ![Imagen ](./documentationImg/19buscarUsuarios.png)
+  ### Ilustración 19: Buscar Usuarios
+
+- **POST /usuarios**: Sirve para crear un nuevo usuario.
+  
+
+  ![Imagen ](./documentationImg/20crearUsuario.png)
+  ### Ilustración 20: Crear Usuario
+
+#### 2. Preferencia Controller
+En el **Preferencia Controller**, se encuentran los Endpoints relacionados con las preferencias que el usuario selecciona, tales como el **email** y **nombre de usuario**. Estas preferencias se utilizarán internamente en el Backend de la misma forma que en el `POST /usuarios`.
+
+- **POST /preferencias**: Al llenarlo, devolverá un **status OK** y mostrará los destinos seleccionados según las preferencias del usuario.
+  
+
+  ![Imagen ](./documentationImg/21consultaDestinos.png)
+  ### Ilustración 21: Consulta los destinos según las Preferencias
+
+
+  ![Imagen ](./documentationImg/22estatusOK.png)
+  ### Ilustración 22: Estatus OK e información
+
+- **GET /preferencias/usuario/{email}**: Utilizado para tomar las preferencias de un solo usuario, validando el email, que es único en la base de datos. Al ingresar el email, buscará los destinos recomendados para esa persona.
+  
+
+  ![Imagen ](./documentationImg/23consultaPreferenciasUsuario.png)
+  ### Ilustración 23: Consulta las preferencias del usuario
+
+  ![Imagen ](./documentationImg/24estatusOK.png)
+  ### Ilustración 24: Estatus OK e información
+
+#### 3. Destino Controller
+En los **Endpoints de Destino Controller**, se pueden crear o consultar destinos.
+
+- **GET /destinos**: Trae todos los destinos que existen en la base de datos, incluyendo los destinos por defecto como **Bora Bora** y **Dubái**.
+  
+
+  ![Imagen ](./documentationImg/25consultaDestinos.png)
+  ### Ilustración 25: Consulta todos los Destinos
+
+- **POST /destino**: Permite crear un nuevo destino, ingresando el nombre y el continente ID, que se validará posteriormente.
+  
+  ![Imagen ](./documentationImg/26crearDestino.png)
+  ### Ilustración 26: Crear un Destino
+
+  ![Imagen ](./documentationImg/27estatusOk.png)
+  ### Ilustración 27: Estatus OK e información
+
+- **GET /destinos/ids**: Permite consultar los destinos por sus IDs, a través de un array, y devolverá los destinos correspondientes.
+  
+
+  ![Imagen ](./documentationImg/28consultaDestinosPorIds.png)
+  ### Ilustración 28: Consulta Destinos por IDs
+
+  ![Imagen ](./documentationImg/29estatusOk.png)
+  ### Ilustración 29: Estatus OK e información
