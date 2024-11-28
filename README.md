@@ -9,7 +9,7 @@
 5. [Configuración de Base de Datos query](#Configuración-de-Base-de-Datos-query)
 6. [Ejecución de Aplicación](#ejecución-de-aplicación)
 7. [Ubicación enlace Swagger Documentación](#Ubicación-enlace-swagger-documentación)
-8. [Tratamiento Error DB](#tratamiento-error-db)
+8. [Tratamiento Error Base de Datos](#Tratamiento-Error-Base-de-Datos)
 9. [Endpoints, Enlace y Documentación](#Endpoints-Enlace-y-Documentación)
 10. [Reportes](#Reportes)
 11. [Autores](#autores)
@@ -178,7 +178,7 @@ Este enlace se encuentra configurado en el archivo application.yml.
 Ilustración 15: Ubicación enlace Swagger
 
 
-## Tratamiento de Error en la Base de Datos
+## Tratamiento Error Base de Datos
 
 En caso de existir algún error al intentar pasar los datos a la base de datos mediante el archivo `query.sql`, se debe realizar un cambio en el archivo `application.yml`.
 
@@ -289,3 +289,47 @@ En los **Endpoints de Destino Controller**, se pueden crear o consultar destinos
 
   ![Imagen ](./documentationImg/29estatusOk.png)
   ### Ilustración 29: Estatus OK e información
+
+
+## Reportes
+
+Los reportes traen la información relacionada con tres partes principales:
+
+1. **Destinos**
+2. **Usuarios**
+3. **Preferencias**
+
+![Imagen ](./documentationImg/30Reportes.png)
+### Ilustración 30: Sección de Reportes
+
+#### 1. Destinos
+Para la sección de destinos, utilizamos el endpoint **GET /destinos**, el cual obtiene todos los destinos disponibles.
+
+- **Endpoint**: `GET /destinos`
+  
+  [Acceder a los destinos](http://localhost:8084/api/v1/destinos)
+
+  ![Imagen ](./documentationImg/31Destinos.png)
+  ### Ilustración 31: Sección Destinos
+
+#### 2. Usuarios
+Para la sección de usuarios, utilizamos el endpoint **GET /usuarios**, el cual obtiene todos los usuarios registrados.
+
+- **Endpoint**: `GET /usuarios`
+  
+  [Acceder a los usuarios](http://localhost:8084/api/v1/usuarios)
+
+
+  ![Imagen ](./documentationImg/32Usuarios.png)
+  ### Ilustración 32: Sección Usuarios
+
+#### 3. Preferencias
+Para la sección de preferencias, utilizamos el endpoint **GET /preferencias**, el cual obtiene todas las preferencias. Estas preferencias están relacionadas con los destinos seleccionados por los usuarios.
+
+- **Endpoint**: `GET /preferencias`
+  
+  [Acceder a las preferencias](http://localhost:8084/api/v1/preferencias)
+
+
+![Imagen ](./documentationImg/33Preferencias.png)
+  ### Ilustración 33: Sección de Preferencias
