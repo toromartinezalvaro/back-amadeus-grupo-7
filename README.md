@@ -6,12 +6,14 @@
 2. [Diseño ERD](#diseño-erd)
 3. [Instalación](#instalación)
 4. [Configuraciones](#configuraciones)
-5. [Uso de Querys.sql](#uso-de-queryssql)
+5. [Configuración de Base de Datos query](#Configuración-de-Base-de-Datos-query)
 6. [Ejecución de Aplicación](#ejecución-de-aplicación)
-7. [Ubicación enlace Swagger/Documentación](#ubicación-enlace-swaggerdocumentación)
+7. [Ubicación enlace Swagger Documentación](#Ubicación-enlace-swagger-documentación)
 8. [Tratamiento Error DB](#tratamiento-error-db)
 9. [Endpoints/enlace/Documentación](#endpointsenlacedocumentación)
-10. [Autores](#autores)
+10. [Reportes](#Reportes)
+11. [Autores](#autores)
+
 
 ## Descripción
 
@@ -81,21 +83,21 @@ datasource:
 
 Ilustraciones
 
-![Imagen ](./documentationImg/4ubicacionArchiva.png)
+    ![Imagen ](./documentationImg/4ubicacionArchiva.png)
 Ilustración 4: Ubicación del archivo application.yml.
 
-![Imagen ](./documentationImg/5datosConexionDB.png)
+    ![Imagen ](./documentationImg/5datosConexionDB.png)
 Ilustración 5: Datos de la conexión con la DB.
 
-  ## Configuración de Base de Datos: query.sql
+  ## Configuración de Base de Datos query
 Una vez que hayas completado las configuraciones previas, debes proceder con la ejecución de los comandos contenidos en el archivo query.sql. Estos comandos llenarán las tablas maestras y asociarán los destinos con las preferencias.
 
 Pasos para Ejecutar el Archivo query.sql
 Acceder al archivo query.sql
 Dirígete al archivo query.sql y copia los comandos de cada sección. Es importante que los ejecutes en el orden correspondiente en pgAdmin.
 
-![Imagen ](./documentationImg/6ubicacionArchivoQuery.png)
-Ilustración 6: Ubicación archivo query.sql
+    ![Imagen ](./documentationImg/6ubicacionArchivoQuery.png)
+    Ilustración 6: Ubicación archivo query.sql
 
 Ejecución en pgAdmin
 Tienes dos opciones para ejecutar los comandos:
@@ -139,7 +141,7 @@ Ejecución en grupos pequeños: Llena las tablas en grupos de tres comandos a la
 ![Imagen ](./documentationImg/11preferenciasDestinos.png)
 Ilustración 11: Preferencias y Destinos
 
- ## Ejecución de la Aplicación
+ ## Ejecución de Aplicación
 Una vez que hayas completado las configuraciones previas y ejecutado los comandos necesarios en la base de datos, es momento de ejecutar la aplicación.
 
 Pasos para Ejecutar la Aplicación
@@ -165,7 +167,7 @@ Ilustración 13: Ubicación archivo para ejecutar
 Ilustración 14: Ubicación lugar para correr el proyecto
 
 
-Enlace para Swagger/Documentación
+ ## Ubicación enlace Swagger Documentación
 Al realizar los pasos anteriores y ejecutar la aplicación correctamente, podrás acceder a la documentación de la API a través de Swagger utilizando el siguiente enlace:
 
 http://localhost:8084/api/v1/swagger-ui/index.html
@@ -176,3 +178,32 @@ Este enlace se encuentra configurado en el archivo application.yml.
 Ilustración 15: Ubicación enlace Swagger
 
 
+## Tratamiento de Error en la Base de Datos
+
+En caso de existir algún error al intentar pasar los datos a la base de datos mediante el archivo `query.sql`, se debe realizar un cambio en el archivo `application.yml`.
+
+### Pasos a seguir:
+
+1. **Modificar el archivo `application.yml`**:
+   - Cambiar el valor de `update` por `create-drop`.
+
+2. **Ejecutar la aplicación**:
+   - Si la aplicación no está ejecutándose, ejecutarla.
+   - Si la aplicación ya está en ejecución, esperar a que se recargue la consola de la aplicación mostrando los nuevos cambios.
+
+### ¿Qué hace el comando `create-drop`?
+
+El comando `create-drop` vacía el contenido de todas las tablas de la base de datos. Solo se conserva la estructura de la base de datos (tablas y columnas).
+
+![Imagen ](./documentationImg/16cambioComando.png)
+### Ilustración 16: Ubicación del cambio de comando
+
+*Borra los datos*
+
+
+![Imagen ](./documentationImg/17createDrop.png)
+### Ilustración 17: Ubicación del cambio de comando
+
+Una vez verificada la eliminación de los datos, se debe regresar el cambio a `update` para que los nuevos datos sean guardados correctamente. 
+
+**Nota**: Si no se regresa el cambio a `update`, la aplicación estará constantemente eliminando todo el ingreso de datos.
