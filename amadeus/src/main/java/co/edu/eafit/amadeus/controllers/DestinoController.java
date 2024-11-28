@@ -22,26 +22,23 @@ import co.edu.eafit.amadeus.services.DestinoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "Endpoints Destino Controller") // Define como se va a llamar esa seccion en la UI Swagger
-@RestController //para intercambiar informacion con Json
+@Tag(name = "Endpoints Destino Controller")
+@RestController
 @RequestMapping("/destinos")
 public class DestinoController {
 
-    // Se debe llamar el servicio que se va a usar 
         @Autowired
         private DestinoService destinoService;
 
         @Autowired
         private DestinoMapper destinoMapper;
 
-    // Se usa el "ResponseEntity" para poder devolver un estatus, como seria por ejemplo un 201 de guardado
         @Operation(summary = "Crea un destino", description = "Crea un destino")
         @PostMapping
         public ResponseEntity<DestinoResponse> save(
                 @RequestBody DestinoRequest destinoRequest
         ) {
 
-        // TODO: USAR MAPPER AQUI
         Destino destino = new Destino();
         Continente continente = new Continente();
 
@@ -51,7 +48,6 @@ public class DestinoController {
 
         destino = destinoService.create(destino);
 
-        // TODO: convertir con mapper
         DestinoResponse destinoResponse
                 = DestinoResponse.builder()
                         .id(destino.getId())
@@ -59,7 +55,7 @@ public class DestinoController {
                         .nombreContinente(destino.getContinente().getNombre())
                         .build();
         return ResponseEntity
-                .status(HttpStatus.CREATED) // Envia el estatus de que se guardo bien
+                .status(HttpStatus.CREATED)
                 .body(destinoResponse);
         }
 
