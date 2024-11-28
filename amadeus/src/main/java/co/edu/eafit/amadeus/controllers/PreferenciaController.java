@@ -2,21 +2,24 @@ package co.edu.eafit.amadeus.controllers;
 
 import co.edu.eafit.amadeus.contracts.requests.PreferenciaRequest;
 import co.edu.eafit.amadeus.contracts.responses.DestinoResponse;
+import co.edu.eafit.amadeus.contracts.responses.PreferenciaDestinoResponse;
 import co.edu.eafit.amadeus.contracts.responses.PreferenciaResponse;
 import co.edu.eafit.amadeus.entities.*;
 import co.edu.eafit.amadeus.models.Preferencia;
 import co.edu.eafit.amadeus.models.Destino;
-import co.edu.eafit.amadeus.models.Continente;
 import co.edu.eafit.amadeus.repositories.*;
 import co.edu.eafit.amadeus.services.PreferenciaService;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
+import co.edu.eafit.amadeus.mappers.DestinoMapper;
 
 @Api(tags = {"Endpoints Productos Controller"})
 @RestController
@@ -37,6 +40,9 @@ public class PreferenciaController {
 
     @Autowired
     private DestinoRepository destinoRepository;
+
+    @Autowired
+    private DestinoMapper destinoMapper;
 
     @Operation(summary = "Consulta los destinos según las preferencias", description = "Consulta los destinos según las preferencias")
     @PostMapping
@@ -71,9 +77,12 @@ public class PreferenciaController {
             // Buscar destinos con continente_id igual a 1
             List<DestinoEntity> destinos = destinoRepository.findByContinenteId(1L);
 
-            // Asociar la nueva preferencia con los destinos encontrados
+            // Mapear destinos a objetos de dominio utilizando el mapper
+            List<Destino> destinosDominio = destinos.stream()
+                    .map(destinoMapper::toDestino)
+                    .collect(Collectors.toList());
+
             nuevaPreferencia.setDestinos(destinos);
-            preferenciaRepository.save(nuevaPreferencia);
 
             // Actualizar la preferencia con la nueva preferencia creada
             preferencia = new Preferencia();
@@ -84,30 +93,12 @@ public class PreferenciaController {
             preferencia.setAlojamiento(nuevaPreferencia.getAlojamiento());
             preferencia.setTiempoViaje(nuevaPreferencia.getTiempoViaje());
             preferencia.setRangoEdad(nuevaPreferencia.getRangoEdad());
-
-            // Mapear destinos a objetos de dominio
-            List<Destino> destinosDominio = destinos.stream().map(destinoEntity -> {
-                Destino destino = new Destino();
-                destino.setId(destinoEntity.getId());
-                destino.setNombre(destinoEntity.getNombre());
-                Continente continente = new Continente();
-                continente.setId(destinoEntity.getContinente().getId());
-                continente.setNombre(destinoEntity.getContinente().getNombre());
-                continente.setDescripcion(destinoEntity.getContinente().getDescripcion());
-                destino.setContinente(continente);
-                return destino;
-            }).collect(Collectors.toList());
-
             preferencia.setDestinos(destinosDominio);
         }
 
-        // Mapear destinos a respuestas
+        //Mapear destinos a respuestas utilizando el mapper
         List<DestinoResponse> destinoResponses = preferencia.getDestinos().stream()
-                .map(destino -> DestinoResponse.builder()
-                        .id(destino.getId())
-                        .nombre(destino.getNombre())
-                        .nombreContinente(destino.getContinente().getNombre())
-                        .build())
+                .map(destinoMapper::toDestinoResponse)
                 .collect(Collectors.toList());
 
         // Guardar relación preferencia-usuario
@@ -133,16 +124,43 @@ public class PreferenciaController {
                     PreferenciaEntity preferencia = preferenciaUsuario.getPreferencia();
                     List<DestinoResponse> destinoResponses = preferencia.getDestinos().stream()
                             .map(destino -> DestinoResponse.builder()
-                                    .id(destino.getId())
-                                    .nombre(destino.getNombre())
-                                    .nombreContinente(destino.getContinente().getNombre())
-                                    .build())
+                            .id(destino.getId())
+                            .nombre(destino.getNombre())
+                            .nombreContinente(destino.getContinente().getNombre())
+                            .build())
                             .collect(Collectors.toList());
 
                     return PreferenciaResponse.builder()
                             .destinoResponseList(destinoResponses)
                             .build();
                 }).collect(Collectors.toList());
+
+        return ResponseEntity.ok(preferenciasResponses);
+    }
+
+    @Operation(summary = "Consulta todas las preferencias", description = "Consulta todas las preferencias")
+    @GetMapping
+    public ResponseEntity<List<PreferenciaDestinoResponse>> getAllPreferencias() {
+        List<Preferencia> preferencias = preferenciaService.findAll();
+
+        List<PreferenciaDestinoResponse> preferenciasResponses = preferencias.stream()
+                .map(preferencia -> {
+                    List<DestinoResponse> destinoResponses = preferencia.getDestinos().stream()
+                            .map(destinoMapper::toDestinoResponse)
+                            .collect(Collectors.toList());
+
+                    return PreferenciaDestinoResponse.builder()
+                            .id(preferencia.getId())
+                            .entorno(preferencia.getEntorno())
+                            .clima(preferencia.getClima())
+                            .actividad(preferencia.getActividad())
+                            .alojamiento(preferencia.getAlojamiento())
+                            .tiempoViaje(preferencia.getTiempoViaje())
+                            .rangoEdad(preferencia.getRangoEdad())
+                            .destinoResponseList(destinoResponses)
+                            .build();
+                })
+                .collect(Collectors.toList());
 
         return ResponseEntity.ok(preferenciasResponses);
     }
