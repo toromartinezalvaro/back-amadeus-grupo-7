@@ -1,5 +1,6 @@
 package co.edu.eafit.amadeus.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -32,7 +33,6 @@ public class PreferenciaServiceImpl implements PreferenciaService {
 
         PreferenciaEntity preferenciaEntity = preferenciaEntityOptional.get();
 
-        // TODO: Usar Mapper para pasar de "PreferenciaEntity" a "Preferencia"
         preferencia.setId(preferenciaEntity.getId());
         preferencia.setEntorno(preferenciaEntity.getEntorno());
         preferencia.setClima(preferenciaEntity.getClima());
@@ -57,5 +57,41 @@ public class PreferenciaServiceImpl implements PreferenciaService {
         }).collect(Collectors.toList()));
 
         return preferencia;
+    }
+
+    @Override
+    public List<Preferencia> findAll() {
+        List<PreferenciaEntity> preferenciaEntities = preferenciaRepository.findAll();
+        return preferenciaEntities.stream()
+                .map(entity -> {
+                    Preferencia preferencia = new Preferencia();
+                    preferencia.setId(entity.getId());
+                    preferencia.setEntorno(entity.getEntorno());
+                    preferencia.setClima(entity.getClima());
+                    preferencia.setActividad(entity.getActividad());
+                    preferencia.setAlojamiento(entity.getAlojamiento());
+                    preferencia.setTiempoViaje(entity.getTiempoViaje());
+                    preferencia.setRangoEdad(entity.getRangoEdad());
+                    preferencia.setDestinos(entity.getDestinos().stream()
+                            .map(destinoEntity -> {
+                                Destino destino = new Destino();
+                                destino.setId(destinoEntity.getId());
+                                destino.setNombre(destinoEntity.getNombre());
+                                Continente continente = new Continente();
+                                continente.setId(destinoEntity.getContinente().getId());
+                                continente.setNombre(destinoEntity.getContinente().getNombre());
+                                continente.setDescripcion(destinoEntity.getContinente().getDescripcion());
+                                destino.setContinente(continente);
+                                destino.setPais(destinoEntity.getPais());
+                                destino.setIdioma(destinoEntity.getIdioma());
+                                destino.setLugarImperdible(destinoEntity.getLugarImperdible());
+                                destino.setComidaTipica(destinoEntity.getComidaTipica());
+                                destino.setImgUrl(destinoEntity.getImgUrl());
+                                return destino;
+                            })
+                            .collect(Collectors.toList()));
+                    return preferencia;
+                })
+                .collect(Collectors.toList());
     }
 }
