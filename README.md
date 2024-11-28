@@ -333,3 +333,14 @@ Para la sección de preferencias, utilizamos el endpoint **GET /preferencias**, 
 
 ![Imagen ](./documentationImg/33Preferencias.png)
   ### Ilustración 33: Sección de Preferencias
+
+
+## Autores 
+
+Colaboradores que hicieron posible este proyecto:
+
+- **Alvaro Toro Martinez**  
+  Email: [torom.alvaro@gmail.com](mailto:torom.alvaro@gmail.com)
+
+- **Yasmin Sirley Ospina Bran**  
+  Email: [sirleyob244@gmail.com](mailto:sirleyob244@gmail.com)
