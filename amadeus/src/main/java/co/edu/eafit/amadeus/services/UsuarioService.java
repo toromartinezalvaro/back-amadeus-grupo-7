@@ -10,6 +10,4 @@ public interface UsuarioService {
   Usuario create(Usuario usuario);
 
   List<Usuario> findAll();
-
-  Usuario findById(Long id);
 }
