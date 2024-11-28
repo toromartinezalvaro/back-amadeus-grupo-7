@@ -223,7 +223,7 @@ Los tres Endpoints disponibles son:
 
 
 
-![Imagen ](./documentationImg/18swagger.png)
+![Imagen ](./documentationImg/18swaggerdoc.png)
 ### Ilustración 18: Endpoints en el enlace de Swagger
 
 #### 1. Usuario Controller
