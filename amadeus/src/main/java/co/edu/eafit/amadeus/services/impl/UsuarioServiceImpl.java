@@ -21,7 +21,6 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Autowired
     private UsuarioMapper usuarioMapper;
 
-    // TODO: IMPLEMENTAR MAPPERS
     @Override
     public Usuario create(Usuario usuario) {
         // Convertir de Usuario (modelo) a UsuarioEntity (entidad)
@@ -43,12 +42,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         return usuarioEntities.stream()
                 .map(usuarioMapper::toUsuario) // Usamos el método toUsuario del UsuarioMapper
                 .collect(Collectors.toList());  // Convertimos el stream en una lista
-    }
-
-    @Override
-    public Usuario findById(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }
 
 }

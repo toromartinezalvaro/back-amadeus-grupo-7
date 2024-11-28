@@ -43,14 +43,14 @@ public class DestinoEntity implements Serializable {
     @Column(name = "img_url")
     String imgUrl;
 
-    @ManyToOne // Muchos destinos estan en un solo continente
-    @JoinColumn(name = "continentes_id") // Asigna el nombre de la FK en la tabla de 
+    @ManyToOne
+    @JoinColumn(name = "continentes_id")
     ContinenteEntity continente;
 
     @Column(name = "created_at", updatable = false)
     LocalDateTime createdAt;
 
-    @PrePersist // Siempre que se guarde información se va a ejecutar el metodo prePersist para que agregue la fecha de creacion
+    @PrePersist 
     public void prePersist() {
         if (createdAt == null) {
             createdAt = LocalDateTime.now();
