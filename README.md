@@ -35,7 +35,7 @@ Este enfoque optimiza tiempos de respuesta y ofrece un sistema eficiente para an
 
 ## Diseño ERD 
 ![Imagen Relación Base de Datos](./documentationImg/ERD_DB.jpeg) 
-Ilustración 1. ERD de la DB
+### Ilustración 1. ERD de la DB
 
 ## Instalación
 
@@ -49,7 +49,7 @@ Para instalar las dependencias necesarias y configurar el proyecto, sigue estos 
    ./gradlew build
 
 ![Imagen ](./documentationImg/2InstalacionDependencias.png)
-Ilustración 2 Comando Instalación de Dependencias 
+### Ilustración 2 Comando Instalación de Dependencias 
 
 Este comando instalará todas las dependencias especificadas en el archivo build.gradle. Estas dependencias incluyen:
 
@@ -58,7 +58,7 @@ MapStruct: Empleada para gestionar los mapeos entre entidades y DTOs de manera e
 Una vez completado este proceso, el proyecto estará listo para continuar con las configuraciones y ejecución.
 
 ![Imagen ](./documentationImg/3todasLasDependencias.png)
-Ilustración 3 Todas las dependencias 
+### Ilustración 3 Todas las dependencias 
 
 ## Configuraciones
 Una vez que hayas instalado lo mencionado previamente, debes proceder con la configuración del archivo application.yml que se encuentra en la carpeta resources. En este archivo se definen las configuraciones necesarias para la aplicación.
@@ -84,10 +84,10 @@ password: tu_contraseña
 Ilustraciones
 
 ![Imagen ](./documentationImg/4ubicacionArchiva.png)
-Ilustración 4: Ubicación del archivo application.yml.
+### Ilustración 4: Ubicación del archivo application.yml.
 
 ![Imagen ](./documentationImg/5datosConexionDB.png)
-Ilustración 5: Datos de la conexión con la DB.
+### Ilustración 5: Datos de la conexión con la DB.
 
 ## Configuración de Base de Datos query
 Una vez que hayas completado las configuraciones previas, debes proceder con la ejecución de los comandos contenidos en el archivo query.sql. Estos comandos llenarán las tablas maestras y asociarán los destinos con las preferencias.
@@ -97,7 +97,7 @@ Acceder al archivo query.sql
 Dirígete al archivo query.sql y copia los comandos de cada sección. Es importante que los ejecutes en el orden correspondiente en pgAdmin.
 
 ![Imagen ](./documentationImg/6ubicacionArchivoQuery.png)
-Ilustración 6: Ubicación archivo query.sql
+### Ilustración 6: Ubicación archivo query.sql
 
 Ejecución en pgAdmin
 Tienes dos opciones para ejecutar los comandos:
@@ -112,25 +112,25 @@ La sección de continentes debe tomarse completa y pasarse completa para ser eje
 
 
 ![Imagen ](./documentationImg/7seccionContinentes.png)
-Ilustración 7: Sección Continentes
+### Ilustración 7: Sección Continentes
 
 Sección Destinos
 La sección de destinos también debe tomarse completa. Si es necesario, puedes ejecutar los destinos por defecto en un solo bloque con el comando COPY.
 
 
 ![Imagen ](./documentationImg/8seccionDestinos.png)
-Ilustración 8: Sección Destinos
+### Ilustración 8: Sección Destinos
 
 
 ![Imagen ](./documentationImg/9seccionDestinosDefault.png)
-Ilustración 9: Sección Destinos por Default
+### Ilustración 9: Sección Destinos por Default
 
 Sección Preferencias
 La sección de preferencias debe tomarse en su totalidad y ejecutarse de una vez (copia y pega).
 
 
 ![Imagen ](./documentationImg/10seccionPreferencias.png)
-Ilustración 10: Sección de Preferencias
+### Ilustración 10: Sección de Preferencias
 
 Llenado de Tablas de Relación
 Después de ejecutar los comandos anteriores, deberás llenar las tablas de relación de Preferencias y Destinos. Para evitar errores durante la ejecución, sigue estos pasos:
@@ -139,7 +139,7 @@ Ejecución en grupos pequeños: Llena las tablas en grupos de tres comandos a la
 
 
 ![Imagen ](./documentationImg/11preferenciasDestinos.png)
-Ilustración 11: Preferencias y Destinos
+### Ilustración 11: Preferencias y Destinos
 
  ## Ejecución de Aplicación
 Una vez que hayas completado las configuraciones previas y ejecutado los comandos necesarios en la base de datos, es momento de ejecutar la aplicación.
@@ -153,18 +153,18 @@ Si estás usando IntelliJ IDEA, aparecerá la opción Run 'AmadeusApplication.ma
 
 
 ![Imagen ](./documentationImg/12correrProyecto.png)
-Ilustración 12: Ubicación para ejecutar o correr el proyecto
+### Ilustración 12: Ubicación para ejecutar o correr el proyecto
 
 Si no aparecen las opciones anteriores
 Si no ves las opciones mencionadas, ingresa al archivo AmadeusApplication. Justo encima del archivo, verás un triángulo apuntando hacia la derecha. Al hacer clic en este triángulo, podrás ejecutar la aplicación.
 
 
 ![Imagen ](./documentationImg/13ubicacionArchivoMain.png)
-Ilustración 13: Ubicación archivo para ejecutar
+### Ilustración 13: Ubicación archivo para ejecutar
 
 
 ![Imagen ](./documentationImg/14correrProyecto.png)
-Ilustración 14: Ubicación lugar para correr el proyecto
+### Ilustración 14: Ubicación lugar para correr el proyecto
 
 
  ## Ubicación enlace Swagger Documentación
@@ -175,7 +175,7 @@ http://localhost:8084/api/v1/swagger-ui/index.html
 Este enlace se encuentra configurado en el archivo application.yml.
 
 ![Imagen ](./documentationImg/15enlaceInterfazSwagger.png)
-Ilustración 15: Ubicación enlace Swagger
+### Ilustración 15: Ubicación enlace Swagger
 
 
 ## Tratamiento Error Base de Datos
